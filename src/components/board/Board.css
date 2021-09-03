@@ -1,34 +1,90 @@
 
-.board .banner {
-    display: block;
-    width: 100%;
-    height: 240px;
-    background-color: #ACF3D3;
-    margin-bottom: 38px;
+@media screen and (min-width: 768px){
+    .board .banner {
+        display: block;
+        width: 100%;
+        height: 240px;
+        background-color: #ACF3D3;
+        margin-bottom: 38px;
+    }
+
+    .board .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        margin-bottom: 18px;
+    }
+
+    .board .header a {
+        color: #3FB488;
+    }
+
+    .board .box {
+        width: 100%;
+        height: 960px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+        padding: 16px 0;
+    }
+
+    .board .box table {
+        border-collapse:separate;
+        border-spacing:24px;
+    }
+
+    .board .box td {
+        min-width: 74px;
+        max-width: 74px;
+        text-align: center;
+    }
 }
 
-.board .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-    margin-bottom: 18px;
-}
 
-.board .header a {
-    color: #3FB488;
-}
 
-.board .box {
-    width: 100%;
-    height: 960px;
-    margin-bottom: 40px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
-    padding: 16px 24px;
-}
+/* 모바일 */
 
-.board .box td {
-    width: 74px;
-    margin-right: 24px;
-    text-align: center;
+@media screen and (max-width: 768px){
+    .board .banner {
+        display: block;
+        width: 100%;
+        height: 240px;
+        background-color: #ACF3D3;
+        margin-bottom: 38px;
+    }
+
+    .board .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        margin-bottom: 18px;
+    }
+
+    .board .header a {
+        color: #3FB488;
+    }
+
+    .board .box-padding {
+        padding: 0 12px;
+    }
+
+    .board .box {
+        width: 100%;
+        height: 720px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+        padding: 12px 0;
+    }
+
+    .board .box table {
+        border-collapse:separate;
+        border-spacing:24px;
+    }
+
+    .board .box td {
+        min-width: 74px;
+        max-width: 74px;
+        text-align: center;
+    }
 }
