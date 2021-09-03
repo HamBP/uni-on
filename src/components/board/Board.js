@@ -1,8 +1,17 @@
 import "./Board.css";
 import Header from "../header/Header";
 import {Link} from "react-router-dom";
+import axios from "axios";
+import network from "../../global/network";
 
 function Board() {
+  const getArticleList = () => {
+    axios.get(network.baseURL + "articles")
+      .then(res => {
+        console.log(res);
+      })
+  }
+
   const setArticle = () => {
     const whereToInsert = document.getElementById("articles");
 
@@ -31,7 +40,7 @@ function Board() {
         <div className="header">
           <h3>Noto Sans KR</h3>
           <div className="menu">
-            <span className="search" onClick={setArticle}/>
+            <span className="search" onClick={getArticleList}/>
             <Link to="/post" className="create">글쓰기</Link>
           </div>
         </div>
