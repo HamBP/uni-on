@@ -1,27 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-header {
-    width: 100%;
-    height: 80px;
-    background-color: #F6FFFB;
-    font-size: 18px;
+@media screen and (min-width: 768px){
+    header {
+        width: 100%;
+        height: 80px;
+        background-color: #F6FFFB;
+        font-size: 18px;
+    }
+
+    header .container {
+        display: flex;
+        height: inherit;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    header strong {
+        font-family: 'Lobster', cursive;
+        color: #69CBA1;
+        font-size: 24px;
+    }
+
+    header a {
+        margin-left: 37px;
+        text-decoration: none;
+    }
 }
 
-header .container {
-    display: flex;
-    height: 80px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-}
+@media screen and (max-width: 768px){
+    header {
+        width: 100%;
+        height: 40px;
+        background-color: #F6FFFB;
+        font-size: 14px;
+    }
 
-header strong {
-    font-family: 'Lobster', cursive;
-    color: #69CBA1;
-    font-size: 24px;
-}
+    header .container {
+        display: flex;
+        height: inherit;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+    }
 
-header a {
-    margin-left: 37px;
-    text-decoration: none;
+    header strong {
+        font-family: 'Lobster', cursive;
+        color: #69CBA1;
+        font-size: 18px;
+    }
+
+    header a {
+        margin-left: 18px;
+        text-decoration: none;
+    }
 }
