@@ -37,17 +37,21 @@
         width: 100%;
         height: 24px;
         margin-bottom: 12px;
+        padding: 0 8px;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
         border: none;
         outline: none;
+        font-size: 14px;
     }
 
     .post-article .box .content {
         display: block;
         width: 100%;
+        padding: 8px;
         min-height: 300px;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
         border: none;
         outline: none;
+        font-size: 12px;
     }
 }
