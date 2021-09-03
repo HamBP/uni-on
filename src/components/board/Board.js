@@ -1,5 +1,6 @@
 import "./Board.css";
 import Header from "../header/Header";
+import {Link} from "react-router-dom";
 
 function Board() {
   return (
@@ -11,7 +12,7 @@ function Board() {
           <h3>Noto Sans KR</h3>
           <div className="menu">
             <span className="search"/>
-            <a href="#" className="create">글쓰기</a>
+            <Link to="/post" className="create">글쓰기</Link>
           </div>
         </div>
         <div className="box-padding">
