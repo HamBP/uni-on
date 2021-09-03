@@ -59,6 +59,10 @@ h3 {
     font-size: 18px;
   }
 
+  li {
+    list-style: none;
+  }
+
   .container {
     width: 100%;
   }

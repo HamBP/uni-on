@@ -6,50 +6,30 @@ function Board() {
     <div className="board">
       <Header/>
       <div className="container">
-        <span className="banner">원래 이미지 들어가야 됨</span>
+        <span className="banner"/>
         <div className="header">
           <h3>Noto Sans KR</h3>
-          <a href="#">글쓰기</a>
+          <div className="menu">
+            <span className="search"/>
+            <a href="#" className="create">글쓰기</a>
+          </div>
         </div>
         <div className="box-padding">
           <div className="box">
-            <table>
-              <tr className="mobile-none">
-                <th>ID</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>작성일</th>
-                <th>조회</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>로렘입숨</td>
-                <td>익명</td>
-                <td>2021.09.03.</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>로렘입숨</td>
-                <td>익명</td>
-                <td>2021.09.03.</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
+            <ul>
+              <li className="article">
+                <p className="article-title">로렘입숨1</p>
+                <p className="article-info">익명 2021.09.03. 조회 0</p>
+              </li>
+              <li className="article">
+                <p className="article-title">로렘입숨2</p>
+                <p className="article-info">익명 2021.09.03. 조회 0</p>
+              </li>
+              <li className="article">
+                <p className="article-title">로렘입숨3</p>
+                <p className="article-info">익명 2021.09.03. 조회 0</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
