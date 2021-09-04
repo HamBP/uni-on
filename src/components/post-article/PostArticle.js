@@ -21,9 +21,9 @@ function PostArticle(props) {
         <Link to="/" className="undo"/>
         <button className="submit" onClick={postArticle}>등록</button>
       </div>
-      <div className="box">
-        <input id="title" type="text" className="title"/>
-        <textarea name="" id="content" cols="30" rows="10" className="content"/>
+      <div>
+        <input id="title" type="text" className="title" placeholder="제목"/>
+        <textarea name="" id="content" cols="30" rows="10" className="content" placeholder="내용을 입력해주세요."/>
       </div>
     </div>
   );
