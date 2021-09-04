@@ -3,8 +3,13 @@ import Header from "../header/Header";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import network from "../../global/network";
+import {useEffect} from "react";
 
-function Board() {
+function Board(props) {
+  useEffect(() => {
+    renderArticleList();
+  }, [])
+
   const renderArticleList = async () => {
     const articles = (await getArticleList()).data;
     console.log(articles);
@@ -22,6 +27,10 @@ function Board() {
 
     const li = document.createElement("li");
     li.className = "article";
+    li.onclick = () => { props.history.push({
+      pathname: "/read",
+      state: {articleId: article.id}
+    }); };
 
     const p1 = document.createElement("p");
     p1.innerText = article.title;
@@ -45,7 +54,7 @@ function Board() {
         <div className="header">
           <h3>Noto Sans KR</h3>
           <div className="menu">
-            <span className="search" onClick={renderArticleList}/>
+            <span className="search"/>
             <Link to="/post" className="create">글쓰기</Link>
           </div>
         </div>
@@ -53,15 +62,11 @@ function Board() {
           <div className="box">
             <ul id="articles">
               <li className="article">
-                <p className="article-title">로렘입숨1</p>
+                <p className="article-title">테스트 1</p>
                 <p className="article-info">익명 2021.09.03. 조회 0</p>
               </li>
               <li className="article">
-                <p className="article-title">로렘입숨2</p>
-                <p className="article-info">익명 2021.09.03. 조회 0</p>
-              </li>
-              <li className="article">
-                <p className="article-title">로렘입숨3</p>
+                <p className="article-title">테스트 2</p>
                 <p className="article-info">익명 2021.09.03. 조회 0</p>
               </li>
             </ul>
