@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import axios from "axios";
 import network from "../../global/network";
 
-function PostArticle() {
+function PostArticle(props) {
   const postArticle = () => {
     const title = document.getElementById("title").value;
     const content = document.getElementById("content").value;
@@ -11,10 +11,8 @@ function PostArticle() {
     formData.append("title", title);
     formData.append("content", content);
 
-    axios.post(network.baseURL + "articles", formData)
-      .then(res => {
-        console.log("요청");
-      })
+    axios.post(network.baseURL + "articles", formData);
+    props.history.push("/");
   }
 
   return (
