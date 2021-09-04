@@ -5,25 +5,30 @@ import axios from "axios";
 import network from "../../global/network";
 
 function Board() {
-  const getArticleList = () => {
-    axios.get(network.baseURL + "articles")
-      .then(res => {
-        console.log(res);
-      })
+  const renderArticleList = async () => {
+    const articles = (await getArticleList()).data;
+    console.log(articles);
+    articles.forEach(it => {
+      setArticle(it);
+    });
   }
 
-  const setArticle = () => {
+  const getArticleList = () => {
+    return axios.get(network.baseURL + "articles");
+  }
+
+  const setArticle = (article) => {
     const whereToInsert = document.getElementById("articles");
 
     const li = document.createElement("li");
     li.className = "article";
 
     const p1 = document.createElement("p");
-    p1.innerText = "test";
+    p1.innerText = article.title;
     p1.className = "article-title"
 
     const p2 = document.createElement("p");
-    p2.innerText = "t e s t";
+    p2.innerText = `${article.user} 2021.09.?? 조회 -`;
     p2.className = "article-info"
 
     li.append(p1);
@@ -40,7 +45,7 @@ function Board() {
         <div className="header">
           <h3>Noto Sans KR</h3>
           <div className="menu">
-            <span className="search" onClick={getArticleList}/>
+            <span className="search" onClick={renderArticleList}/>
             <Link to="/post" className="create">글쓰기</Link>
           </div>
         </div>
