@@ -17,6 +17,7 @@
     }
 
     .post-article .header .submit {
+        cursor: pointer;
         width: 48px;
         height: 24px;
         color: #3FB488;
@@ -25,14 +26,7 @@
         border-radius: 2px;
     }
 
-    .post-article .box {
-        width: 100%;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-        background-color: #FFF;
-        padding: 12px;
-    }
-
-    .post-article .box .title {
+    .post-article .title {
         display: block;
         width: 100%;
         height: 24px;
@@ -44,7 +38,7 @@
         font-size: 14px;
     }
 
-    .post-article .box .content {
+    .post-article .content {
         display: block;
         width: 100%;
         padding: 8px;
